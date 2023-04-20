@@ -1,9 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import NavBar from "./components/NavBar"
 
 function App() {
 
   return (
     <div className="App">
-      <h1 className="font-bold underline">Hello</h1>
+      <Router>
+        <NavBar/>
+        <Routes>
+          
+        </Routes>
+      </Router>
     </div>
   )
 }
