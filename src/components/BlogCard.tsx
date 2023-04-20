@@ -1,12 +1,17 @@
-import React from 'react'
+type BlogCardProps = {
+    image : string,
+    name : string,
+    desc : string,
+    date : string
+}
 
-const BlogCard = () => {
+const BlogCard = ({ image, name, desc, date } : BlogCardProps ) => {
   return (
-    <div className='cursor-pointer group flex flex-col gap-3'>
-        <img src="/assets/blog/blog-post-1.jpg" alt="blog-img" className='border rounded-md group-hover:border-black' />
-        <h1 className=' text-2xl font-bold tracking-tight'>Preview Mode for Headless CMS</h1>
-        <p className='text-gray-500'>How to implement preview mode in your headless CMS.</p>
-        <p className='text-gray-500'>April 9, 2023</p>
+    <div className='cursor-pointer group flex flex-col gap-2'>
+        <img src={`/assets/blog/${image}`} alt="blog-img" className='border rounded-md group-hover:border-black' />
+        <h1 className=' text-2xl font-bold tracking-tight'>{name}</h1>
+        <p className='text-gray-500'>{desc}</p>
+        <p className='text-gray-500'>{date}</p>
     </div>
   )
 }
