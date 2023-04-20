@@ -3,7 +3,7 @@ import FeatureCard from './FeatureCard'
 
 const Features = () => {
   return (
-    <div className='flex flex-col gap-5 border-b py-10'>
+    <div className='flex flex-col gap-5 py-10'>
         <h1 className='md:text-6xl text-3xl font-bold tracking-tighter'>Features</h1>
         <p className='md:text-xl text-gray-600 tracking-tight'>This project is an experiment to see how a modern app, with features like auth, subscriptions, 
         API routes, and static pages would work in Next.js 13 app dir.</p>
