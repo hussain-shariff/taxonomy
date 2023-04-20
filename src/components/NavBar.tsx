@@ -18,7 +18,9 @@ const NavBar = () => {
             </div>
             <div className='flex items-center gap-2'>
                 <Moon className='cursor-pointer hover:bg-gray-300 px-2 py-1 rounded-md h-full w-full'/>
-                <button className='bg-black text-sm font-medium text-white px-4 py-1 rounded-md hover:bg-slate-700'>Login</button>
+                <Link to={'/login'}>
+                    <button className='bg-black text-sm font-medium text-white px-4 py-1 rounded-md hover:bg-slate-700'>Login</button>
+                </Link>
             </div>
         </div>
 )
