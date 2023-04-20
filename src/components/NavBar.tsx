@@ -5,7 +5,7 @@ const NavBar = () => {
 
 
     return (
-        <div className='flex px-8 py-3 items-center justify-between border-b sticky top-0 md:px-12'>
+        <div className='flex px-8 bg-white py-3 items-center justify-between border-b sticky top-0 md:px-12'>
             <div className='flex gap-5 md:gap-10 items-center'>
                 <Link to={'/'} className='flex items-center gap-1 md:gap-2 mr-1'>
                     <Command color="black" size={22} />
