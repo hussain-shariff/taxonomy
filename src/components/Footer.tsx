@@ -1,8 +1,16 @@
-import React from 'react'
+import { Command } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className=' text-slate-600 text-sm px-10 py-4 flex items-center justify-between'>
+        <div className='flex items-center gap-2'>
+            <Command/>
+            <p>
+                Built by <a className=' underline' href="https://github.com/hussain-shariff">Hussain Shariff</a>. Hosted on <a href="https://vercel.com" className=' underline'>Vercel</a>. Illustrations by <a href="https://popsy.co" className=' underline'>Popsy</a>
+            </p>
+        </div>
+        <p>The source code is available on <a href="https://github.com/hussain-shariff" className=' underline'>GitHub</a>.</p>
+    </div>
   )
 }
 

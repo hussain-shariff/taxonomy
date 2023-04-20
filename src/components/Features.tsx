@@ -3,9 +3,9 @@ import FeatureCard from './FeatureCard'
 
 const Features = () => {
   return (
-    <div className='flex flex-col gap-5 py-10'>
+    <div id='features' className='flex flex-col gap-5 py-10'>
         <h1 className='md:text-6xl text-3xl font-bold tracking-tighter'>Features</h1>
-        <p className='md:text-xl text-gray-600 tracking-tight'>This project is an experiment to see how a modern app, with features like auth, subscriptions, 
+        <p className='md:text-lg md:w-[75%] text-gray-600 tracking-tight'>This project is an experiment to see how a modern app, with features like auth, subscriptions, 
         API routes, and static pages would work in Next.js 13 app dir.</p>
         <div className='grid md:grid-cols-3 gap-4'>
             <FeatureCard
@@ -34,7 +34,7 @@ const Features = () => {
                 description='Free and paid subscriptions using Stripe.'/>
             
         </div>
-        <p className='md:text-xl text-gray-600 tracking-tight'>Taxonomy also includes a blog and a full-featured documentation site built using Contentlayer and MDX.</p>
+        <p className='md:text-lg md:w-[75%] text-gray-600 tracking-tight'>Taxonomy also includes a blog and a full-featured documentation site built using Contentlayer and MDX.</p>
     </div>
   )
 }
