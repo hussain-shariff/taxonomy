@@ -12,7 +12,9 @@ const NavBar = () => {
                     <h1 className=' font-bold'>Taxonomy</h1>
                 </Link>
                 <a href="#features" className='text-gray-600 font-medium text-sm hover:text-black cursor-pointer'>Features</a>
-                <p className='text-gray-600 font-medium text-sm hover:text-black cursor-pointer'>Blog</p>
+                <Link to={'/blog'}>
+                    <p className='text-gray-600 font-medium text-sm hover:text-black cursor-pointer'>Blog</p>
+                </Link>
             </div>
             <div className='flex items-center gap-2'>
                 <Moon className='cursor-pointer hover:bg-gray-300 px-2 py-1 rounded-md h-full w-full'/>

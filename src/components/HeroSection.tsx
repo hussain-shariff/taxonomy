@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className='flex gap-3'>
             <button className='bg-black text-white text-sm rounded-md font-semibold px-6 py-2 hover:bg-slate-700'>Get started</button>
             <button className='border px-5 py-2 rounded-md font-semibold text-sm flex items-center gap-1 hover:bg-black hover:text-white
-             transition ease-out duration-700'>
+            transition ease-out duration-700'>
                 <Github/>Github
             </button>
         </div>

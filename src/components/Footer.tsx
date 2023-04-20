@@ -2,7 +2,7 @@ import { Command } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <div className=' text-slate-600 text-sm px-10 py-4 flex flex-col gap-2 text-center items-center justify-between md:flex-row'>
+    <div className=' text-slate-600 text-sm px-10 py-4 flex flex-col gap-2 text-center items-center justify-between md:flex-row border-t'>
         <div className='flex flex-col md:flex-row items-center gap-2'>
             <Command/>
             <p>
