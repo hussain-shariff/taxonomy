@@ -13,7 +13,7 @@ const Features = () => {
                 name='Next.js 13'
                 description='App dir, Routing, Layouts, Loading UI and API routes.'/>
             <FeatureCard
-                icon='reactjs.svg'
+                icon='reactjs2.svg'
                 name='React 18'
                 description='Server and Client Components. Use hook.'/>
             <FeatureCard
@@ -21,7 +21,7 @@ const Features = () => {
                 name='Database'
                 description='ORM using Prisma and deployed on PlanetScale.'/>
             <FeatureCard
-                icon='components.svg'
+                icon='component.svg'
                 name='Components'
                 description='UI components built using Radix UI and styled with Tailwind CSS.'/>
             <FeatureCard
