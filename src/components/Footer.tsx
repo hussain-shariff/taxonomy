@@ -9,7 +9,7 @@ const Footer = () => {
                 Built by <a className=' underline' href="https://github.com/hussain-shariff">Hussain</a>. Hosted on <a href="https://vercel.com" className=' underline'>Vercel</a>. Illustrations by <a href="https://popsy.co" className=' underline'>Popsy</a>
             </p>
         </div>
-        <p>The source code is available on <a href="https://github.com/hussain-shariff" className=' underline'>GitHub</a>.</p>
+        <p>The source code is available on <a href="https://github.com/hussain-shariff/taxonomy" className=' underline'>GitHub</a>.</p>
     </div>
   )
 }
