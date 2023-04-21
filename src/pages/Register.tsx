@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 
 const Register = () => {
   return (
-    <div className=' min-h-screen grid grid-cols-2'>
-        <div className=' border-r bg-slate-200 flex justify-center items-center'>
+    <div className=' min-h-screen grid md:grid-cols-2'>
+        <div className=' border-r bg-slate-200 md:flex justify-center items-center hidden'>
             <img src="/shadcn.png" alt="img" className=' h-96' />
         </div>
         <div className='flex justify-center items-center relative'>
