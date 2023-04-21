@@ -6,9 +6,10 @@ const Login = () => {
   return (
     <div className='min-h-screen flex justify-center items-center relative'>
         <Link to={'/'}>
-            <p className='flex gap-2 items-center p-5 absolute top-0 left-8'> <ChevronLeft className='h-5'/> Back</p>
+            <p className='flex items-center text-sm p-5 absolute top-0 left-8'> <ChevronLeft className='h-5'/> Back</p>
         </Link>
-        <Auth/>
+        <Auth
+          isRegister={false}/>
     </div>
   )
 }
