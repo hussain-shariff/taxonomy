@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Footer from "./components/Footer"
 import Blog from "./pages/Blog"
 import Login from "./pages/Login"
+import Register from "./pages/Register"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home/>}></Route>
           <Route path="/blog" element={<Blog/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/register" element={<Register/>}></Route>
         </Routes>
         <Footer/>
       </Router>
