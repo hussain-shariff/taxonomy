@@ -1,13 +1,17 @@
 import React, {createContext, useContext, useReducer} from 'react'
 import blogReducer, {initialState} from './reducer'
+import { State, Action } from '../types'
 
-const blogContext = createContext(initialState)
+const BlogContext = createContext<{
+    state: State;
+    dispatch: React.Dispatch<Action>;
+    }>({ state: initialState, dispatch: () => null });
 
 type contextProviderProps = {
     children : React.ReactNode
 }
 
-export function contextProvider( {children} : contextProviderProps) {
+export function ContextProvider( {children} : contextProviderProps) {
 
     const [state, dispatch] = useReducer(blogReducer, initialState)
 
@@ -18,16 +22,19 @@ export function contextProvider( {children} : contextProviderProps) {
 
     const values = {
         state,
+        dispatch,
         toggleMode
     }
 
   return (
-    <blogContext.Provider value={values}>
+    <BlogContext.Provider value={values}>
         {children}
-    </blogContext.Provider>
+    </BlogContext.Provider>
   )
 }
 
-const appContext = useContext(blogContext)
+const useAppContext = () =>{
+    return useContext(BlogContext)
+  }
 
-export default appContext 
+export default useAppContext 
