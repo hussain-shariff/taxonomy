@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Blog from "./pages/Blog"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import DashBoard from "./pages/DashBoard"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/blog" element={<Blog/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
+          <Route path="/dashboard" element={<DashBoard/>}></Route>
         </Routes>
         <Footer/>
       </Router>
