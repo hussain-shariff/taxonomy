@@ -5,5 +5,7 @@ export type State = {
 
 export type Action = {
     type : string,
-    payload ?: object
+    payload : {
+        page ?: string
+    }
 }

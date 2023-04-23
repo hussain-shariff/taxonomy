@@ -13,9 +13,11 @@ const blogReducer = (state : State, action : Action) =>{
             isDarkMode : !state.isDarkMode 
         };
     case 'SWITCH_PAGE':
+        console.log(action.payload.page);
+        
         return {
             ...state,
-            dashboardPage : action.payload
+            dashboardPage : action.payload.page
         };
     default:
         throw new Error(`Unhandled action type: ${action.type}`);

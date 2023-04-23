@@ -1,37 +1,61 @@
-import { FileText, CreditCard, Settings, Plus, MoreVertical } from 'lucide-react';
+import { FileText, CreditCard, Settings, Plus, MoreVertical, Divide } from 'lucide-react';
 import PostCard from '../components/PostCard';
+import useAppContext from '../context';
 
 const DashBoard = () => {
+    const {dispatch, state} = useAppContext()
+    const {dashboardPage} = state
+
+    const handleSwitch = (page : string)  =>{
+        dispatch({
+            type : 'SWITCH_PAGE',
+            payload : {page}
+        })
+    }
+
   return (
     <div className='min-h-screen md:grid md:grid-cols-5'>
         <section className='border-r p-5 hidden gap-1 md:flex md:flex-col col-span-1'>
-            <p className=' flex items-center border-b justify-start cursor-pointer gap-1 p-2 text-sm hover:bg-slate-200 rounded'>
+            <p onClick={()=>handleSwitch('posts')} className=' flex items-center border-b justify-start cursor-pointer gap-1 p-2 text-sm hover:bg-slate-200 rounded'>
                 <FileText className=' h-4'/>
                 Posts
             </p>
-            <p className=' flex items-center border-b justify-start cursor-pointer gap-1 p-2 text-sm  hover:bg-slate-200 rounded'>
+            <p onClick={()=>handleSwitch('billing')} className=' flex items-center border-b justify-start cursor-pointer gap-1 p-2 text-sm  hover:bg-slate-200 rounded'>
                 <CreditCard className=' h-4'/> 
                 Billing
             </p>
-            <p className=' flex items-center border-b justify-start cursor-pointer gap-1 p-2 text-sm  hover:bg-slate-200 rounded'>
+            <p onClick={()=>handleSwitch('settings')} className=' flex items-center border-b justify-start cursor-pointer gap-1 p-2 text-sm  hover:bg-slate-200 rounded'>
                 <Settings className=' h-4'/>
                 Settings
             </p>
         </section>
         <section className=' bg-gray-100 col-span-4 p-5'>
-            <div className=' flex items-center justify-between mb-5'>
-                <div>
-                    <h1 className='font-bold text-2xl'>Posts</h1>
-                    <p className=' text-gray-500 mt-1'>Create and manage posts.</p>
+            {dashboardPage === 'posts' &&
+            <>
+                <div className=' flex items-center justify-between mb-5'>
+                    <div>
+                        <h1 className='font-bold text-2xl'>Posts</h1>
+                        <p className=' text-gray-500 mt-1'>Create and manage posts.</p>
+                    </div>
+                    <button className=' px-4 py-2 bg-black text-white flex items-center text-sm font-medium rounded
+                    hover:bg-slate-700'>
+                        <Plus className=' h-4'/> New post
+                    </button>
                 </div>
-                <button className=' px-4 py-2 bg-black text-white flex items-center text-sm font-medium rounded
-                hover:bg-slate-700'>
-                    <Plus className=' h-4'/> New post
-                </button>
-            </div>
-            <PostCard/>
-            <PostCard/>
-            <PostCard/>
+                <PostCard/>
+                <PostCard/>
+                <PostCard/>
+            </>
+            }
+            {dashboardPage === 'settings' && 
+            <>
+                <div className=' flex items-center justify-between mb-5'>
+                    <div>
+                        <h1 className='font-bold text-2xl'>Settings</h1>
+                        <p className=' text-gray-500 mt-1'>Manage account and website settings.</p>
+                    </div>
+                </div>
+            </>}
         </section>
     </div>
   )
