@@ -1,8 +1,8 @@
 import { State, Action } from "../types"
 
-
 export const initialState : State = {
-    isDarkMode : false
+    isDarkMode : false,
+    dashboardPage : 'posts'
 }
 
 const blogReducer = (state : State, action : Action) =>{
@@ -11,6 +11,11 @@ const blogReducer = (state : State, action : Action) =>{
         return {
             ...state,
             isDarkMode : !state.isDarkMode 
+        };
+    case 'SWITCH_PAGE':
+        return {
+            ...state,
+            dashboardPage : action.payload
         };
     default:
         throw new Error(`Unhandled action type: ${action.type}`);

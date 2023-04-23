@@ -12,8 +12,8 @@ const PostCard = () => {
         </div>
         <MoreVertical onClick={()=> setshowMore(!showMore)} className=' text-gray-500 h-4 cursor-pointer'/>
         {showMore && <div className=' z-20 text-sm font-medium absolute -bottom-10 right-8 w-28 p-2 bg-white shadow-md rounded'>
-            <p className='  hover:bg-slate-200 text-gray-600 cursor-pointer px-2'>Edit</p>
-            <p className='text-red-500 hover:bg-slate-200 cursor-pointer px-2'>Delete</p>
+            <p className='  hover:bg-slate-200 text-gray-600 cursor-pointer py-1 px-2'>Edit</p>
+            <p className='text-red-500 hover:bg-slate-200 cursor-pointer py-1 px-2'>Delete</p>
         </div>}
     </div>
   )
