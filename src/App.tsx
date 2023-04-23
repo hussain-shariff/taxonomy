@@ -5,11 +5,8 @@ import Footer from "./components/Footer"
 import Blog from "./pages/Blog"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
-import useAppContext from "./context"
 
 function App() {
-  const {state} = useAppContext()
-  const {isDarkMode} = state
 
   return (
     <div className="relative min-h-screen">

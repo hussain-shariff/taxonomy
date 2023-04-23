@@ -8,9 +8,10 @@ export const initialState : State = {
 const blogReducer = (state : State, action : Action) =>{
     switch (action.type) {
     case 'TOGGLE_MODE':
-        console.log('toggle');
-        
-        return { ...state };
+        return {
+            ...state,
+            isDarkMode : !state.isDarkMode 
+        };
     default:
         throw new Error(`Unhandled action type: ${action.type}`);
 }}

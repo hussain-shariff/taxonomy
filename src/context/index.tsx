@@ -15,15 +15,9 @@ export function ContextProvider( {children} : contextProviderProps) {
 
     const [state, dispatch] = useReducer(blogReducer, initialState)
 
-    const toggleMode = ()=>{
-        dispatch({type : 'TOGGLE_MODE'})
-    }
-
-
     const values = {
         state,
-        dispatch,
-        toggleMode
+        dispatch
     }
 
   return (
