@@ -1,13 +1,19 @@
 import { Command, Moon, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import useAppContext from '../context';
+import { useState } from 'react';
 
 const NavBar = () => {
+    const [showPopup, setshowPopup] = useState(false)
     const {dispatch, state} = useAppContext()
     const {isDarkMode} = state
 
     const handleToggle = ()=>{
         dispatch({type : 'TOGGLE_MODE'})
+    }
+    
+    const handleSwitch = (page : string)=>{
+        dispatch({type : 'SWITCH_PAGE', payload: { page}})
     }
 
     return (
@@ -28,7 +34,19 @@ const NavBar = () => {
                 <Link to={'/login'}>
                     <button className='bg-black text-sm font-medium text-white px-4 py-1 rounded-md hover:bg-slate-700'>Login</button>
                 </Link>
+                <img onClick={()=> setshowPopup(!showPopup)} src="/shadcn.png" alt="logo" className='h-8 rounded-full cursor-pointer' />
             </div>
+            {showPopup &&
+            <div className=' absolute top-12 right-10 text-sm bg-white p-3 shadow-lg flex flex-col gap-1 rounded'>
+                <div className=' mb-3 border-b'>
+                    <h1 className=' font-medium'>Hussain</h1>
+                    <p className=' text-gray-500'>hussainowaiz070@gmail.com</p>
+                </div>
+                <p onClick={()=>handleSwitch('posts')} className='hover:bg-slate-200 px-1 cursor-pointer rounded'>Dashboard</p>
+                <p onClick={()=>handleSwitch('billing')} className='hover:bg-slate-200 px-1 cursor-pointer rounded'>Billing</p>
+                <p onClick={()=>handleSwitch('settings')} className='hover:bg-slate-200 px-1 cursor-pointer rounded'>Settings</p>
+                <p onClick={()=>handleSwitch('posts')} className='hover:bg-slate-200 px-1 cursor-pointer rounded'>Sign out</p>
+            </div>}
         </div>
 )
 };
