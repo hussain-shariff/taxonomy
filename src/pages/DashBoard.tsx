@@ -49,10 +49,16 @@ const DashBoard = () => {
             }
             {dashboardPage === 'settings' && 
             <>
-                <div className=' flex items-center justify-between mb-5'>
+                <div className='flex flex-col'>
                     <div>
                         <h1 className='font-bold text-2xl'>Settings</h1>
                         <p className=' text-gray-500 mt-1'>Manage account and website settings.</p>
+                    </div>
+                    <div className='border p-5 rounded mt-5 space-y-2'>
+                        <h1 className=' font-medium text-lg'>Your Name</h1>
+                        <p className='text-sm text-gray-500'>Please enter your full name or a display name you are comfortable with.</p>
+                        <input placeholder='Name' className='rounded border py-2 px-5' type="text" />
+                        <button className=' ml-4 bg-black rounded py-2 px-4 hover:bg-slate-700 text-white'>Save</button>
                     </div>
                 </div>
             </>}
