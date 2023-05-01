@@ -1,6 +1,7 @@
 import { FileText, CreditCard, Settings, Plus, MoreVertical, Divide } from 'lucide-react';
 import PostCard from '../components/PostCard';
 import useAppContext from '../context';
+import { Link } from 'react-router-dom';
 
 const DashBoard = () => {
     const {dispatch, state} = useAppContext()
@@ -37,10 +38,11 @@ const DashBoard = () => {
                         <h1 className='font-bold text-2xl'>Posts</h1>
                         <p className=' text-gray-500 mt-1'>Create and manage posts.</p>
                     </div>
-                    <button className=' px-4 py-2 bg-black text-white flex items-center text-sm font-medium rounded
-                    hover:bg-slate-700'>
-                        <Plus className=' h-4'/> New post
-                    </button>
+                    <Link to={'/editor'}>
+                        <button className=' px-4 py-2 bg-black text-white flex items-center text-sm font-medium rounded
+                        hover:bg-slate-700'>
+                            <Plus className=' h-4'/> New post</button>
+                    </Link>
                 </div>
                 <PostCard/>
                 <PostCard/>
