@@ -6,7 +6,7 @@ import { useState } from 'react';
 const NavBar = () => {
     const [showPopup, setshowPopup] = useState(false)
     const {dispatch, state} = useAppContext()
-    const {isDarkMode} = state
+    const {isDarkMode, currentUser} = state
 
     const handleToggle = ()=>{
         dispatch({type : 'TOGGLE_MODE'})
@@ -34,7 +34,7 @@ const NavBar = () => {
                 <Link to={'/login'}>
                     <button className='bg-black text-sm font-medium text-white px-4 py-1 rounded-md hover:bg-slate-700'>Login</button>
                 </Link>
-                <img onClick={()=> setshowPopup(!showPopup)} src="/shadcn.png" alt="logo" className='h-8 rounded-full cursor-pointer' />
+                {currentUser && <img onClick={()=> setshowPopup(!showPopup)} src="/shadcn.png" alt="logo" className='h-8 rounded-full cursor-pointer' />}
             </div>
             {showPopup &&
             <div className=' absolute top-12 right-10 text-sm bg-white p-3 shadow-lg flex flex-col gap-1 rounded'>
