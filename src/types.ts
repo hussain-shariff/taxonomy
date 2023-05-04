@@ -1,6 +1,7 @@
 export type State = {
     isDarkMode : boolean,
-    dashboardPage : string
+    dashboardPage : string,
+    currentUser : string
 }
 
 export type Action = {

@@ -2,7 +2,8 @@ import { State, Action } from "../types"
 
 export const initialState : State = {
     isDarkMode : false,
-    dashboardPage : 'posts'
+    dashboardPage : 'posts',
+    currentUser : ''
 }
 
 const blogReducer = (state : State, action : Action) =>{
